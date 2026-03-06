@@ -1,9 +1,9 @@
-public class Pessoa {
+public class Funcionario {
 
     private String nome;
     private double salario;
 
-    public Pessoa(String nome, double  salario){
+    public Funcionario(String nome, double  salario){
         super();
         this.nome = nome;
         this.salario = salario;
@@ -23,7 +23,7 @@ public class Pessoa {
 
     public void setSalario(double  salario) {
         if (salario < 0) {
-            throw new RuntimeException("Idade inválido");
+            throw new RuntimeException("Salario inválido");
         }
         this.salario = salario;
     }

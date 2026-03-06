@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class Atividade01 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Pessoa pessoa = new Pessoa(" ", 0);
+        Scanner teclado = new Scanner(System.in);
+        Funcionario funcionario = new Funcionario("", 0);
             
             System.out.print("Imforme o nome do funcionário: ");
-            pessoa.setNome(scanner.next());
+            funcionario.setNome(teclado.next());
 
             System.out.print("Imforme o salário do funcionário: ");
-            pessoa.setSalario(scanner.nextDouble());
+            funcionario.setSalario(teclado.nextDouble());
 
-            double imposto = pessoa.calcularIrpf();
+            double imposto = funcionario.calcularIrpf();
 
-            System.out.printf("O Total de impostos a serem pagos pelo funcionário "+ pessoa.getNome() +" são R$ %.2f", imposto);
+            System.out.printf("O Total de impostos a serem pagos pelo funcionário "+ funcionario.getNome() +" são R$ %.2f", imposto);
 
-        scanner.close();
+        teclado.close();
     }
 }
